@@ -1,27 +1,54 @@
-# MarcoPolo
+Steps For Running This App:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+Step 1:
+Migrate to the project which you have extracted.
 
-## Development server
+cd marco-polo/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Step 2 :
+Install the required packages using this command
 
-## Code scaffolding
+$npm install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Step 3:
+Now you are ready with project setup, just hit this command on command line
 
-## Build
+$npm start
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Step 4:
+Open the browser and hit
 
-## Running unit tests
+http://localhost:4200/
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+Question(2)=>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1.imports: makes the exported declarations of other modules available in the current module.For example,
+imports: [FormsModule]
+ we import FormsModule in @NgModule. Now we can use the functionality which the FormsModule has to offer throughout the @NgModule module.
+  
+declarations: used to declare components, directives, pipes that belongs to the current module. Once declared, we can use them throughout the whole module. For example,
+  declarations: [UserComponent]
+ UserComponent now is accessible throuhout the module.
 
-## Further help
+providers: used to inject the services required by components, directives, pipes in our module. For example,
+providers: [RegisterService]
+Now, RegisterService can be used in any component of module using dependency injection.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+2.Component: Component is used to break up the application into smaller components,
+Component is a directive with a view.
+
+Directive: Directive is used to add behavior to an existing DOM element. Directive doesn't use View.
+
+Model: they are basically used to consume data from api's.
+A simple example of this is a User class that defines a name variable that's a string and an age variable that must be a number:
+
+export class User {
+  name: string = 'Angular2';
+  age: number = 0;
+}
+
+Module: Modules consist of one or more components. They do not control any html. Modules declare which components can be used by components belonging to other modules, which classes will be injected by the dependency injector and which component gets bootstrapped.
+
+Services: Angular services are mainly used to communicate with API's. They contain methods that maintain data throughout the life of an application, i.e. data does not get refreshed and is available all the time. The main objective of a service is to organize and share business logic, models, or data and functions with different components of an Angular application.
+

@@ -1,0 +1,5 @@
+<div class="container">
+  <h1>User Story</h1>
+    <input class="section" type="file" (change)="handleFileInput($event.target.files)"/>
+    <textarea class="section" *ngIf="outputFile.length" style="width:50%;height:300px;">{{ outputFile }}</textarea>
+</div>

@@ -1,0 +1,13 @@
+.container {
+    margin-left: 0px;
+}
+h1 {
+   font-size: 50px;
+}
+.section {
+    font-size: 20px;
+    margin-left: 20px;
+    width: 100%;
+    word-wrap: break-word;
+
+} 
